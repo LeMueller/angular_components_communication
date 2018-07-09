@@ -4,11 +4,13 @@ import {FormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { StockSearchComponent } from './stock-search/stock-search.component';
+import { StockCartComponent } from './stock-cart/stock-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StockSearchComponent
+    StockSearchComponent,
+    StockCartComponent
   ],
   imports: [
     BrowserModule,

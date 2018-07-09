@@ -12,7 +12,13 @@ export class AppComponent {
 
   private currentPrice: number;
 
+  private stockInfo: StockInfo;
+
   searchResultHandler(stockInfo: StockInfo){
     this.currentPrice = stockInfo.price;
+  }
+
+  addCartHandler(stockInfo: StockInfo) {
+    this.stockInfo = stockInfo;
   }
 }
