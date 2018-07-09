@@ -3,6 +3,11 @@
 </div>
 <div>
   <input placeholder="请输入搜索关键字" type="text" [(ngModel)]="search">
-  <app-stock-search [keyWord]="search" ></app-stock-search>
+
+  要搜索的股票关键字是{{search}}，当前价格是{{currentPrice | number: '2.2-2'}}
+
+  <!-- searchResultHandler 是父组件的事件处理方法 -->
+  <!-- <app-stock-search [keyWord]="search" (searchResult)="searchResultHandler($event)"></app-stock-search> -->
+  <app-stock-search [keyWord]="search" (lastPrice)="searchResultHandler($event)"></app-stock-search>
 </div>
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StockInfo } from './stock-search/stock-search.component';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,9 @@ export class AppComponent {
 
   private search: string;
 
-  title = 'app';
+  private currentPrice: number;
+
+  searchResultHandler(stockInfo: StockInfo){
+    this.currentPrice = stockInfo.price;
+  }
 }
